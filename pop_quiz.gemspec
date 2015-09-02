@@ -7,4 +7,5 @@ Gem::Specification.new do |s|
   s.files       = ['lib/pop_quiz.rb']
   s.homepage    = 'http://rubygems.org/gems/popquiz'
   s.license     = 'MIT'
+  s.add_development_dependency 'rspec'
 end
