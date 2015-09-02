@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
-  s.name        = 'PopQuiz'
-  s.version     = '0.0.2'
+  s.name        = 'popquiz'
+  s.version     = '0.0.3'
   s.authors     = ['Thomas Hart']
   s.summary     = 'PopQuiz is a micro inline testing framework for Ruby'
   s.email       = 'tom@thomashart.me'
