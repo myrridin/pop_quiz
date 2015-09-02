@@ -1,8 +1,9 @@
 class PopQuiz
+
   def self.test_file(filename)
     begin
       file_data = File.read filename
-      require_relative "../#{filename}"
+      require_relative "#{Dir.pwd}/#{filename}"
     rescue Errno::ENOENT => e
       puts 'Error reading file'
       return false
