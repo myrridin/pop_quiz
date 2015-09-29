@@ -1,13 +1,9 @@
-class PopQuiz
+require_relative 'pop_quiz/exception'
+require_relative 'pop_quiz/file'
 
+module PopQuiz
   def self.test_file(filename)
-    begin
-      file_data = File.read filename
-      require_relative "#{Dir.pwd}/#{filename}"
-    rescue Errno::ENOENT => e
-      puts 'Error reading file'
-      return false
-    end
+    file_data = PopQuiz::File.require(filename)
     comments = parse_comments(file_data)
     quizzes = parse_quizzes(comments)
     results = {}
