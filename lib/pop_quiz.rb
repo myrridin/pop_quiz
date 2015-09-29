@@ -3,7 +3,7 @@ require_relative 'pop_quiz/file'
 
 module PopQuiz
   def self.test_file(filename)
-    file_data = PopQuiz::File.require(filename)
+    file_data = PopQuiz::File.read_and_require(filename)
     comments = parse_comments(file_data)
     quizzes = parse_quizzes(comments)
     results = {}
